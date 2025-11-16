@@ -20,7 +20,7 @@
             </div>
 
         <div class="login-login">
-            <div class="login-header">Login</div>
+        <div class="login-header">Login</div>
         <?php 
         // Hiển thị thông báo lỗi hoặc trạng thái (Ví dụ: "Sai mật khẩu", "Chờ Admin duyệt")
         if (!empty($message)): 
