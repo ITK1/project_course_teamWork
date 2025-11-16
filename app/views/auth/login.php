@@ -1,8 +1,3 @@
-<?php 
-
-?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,20 +29,28 @@
         <?php endif; ?>
             
         <form
-          action="index.php?controller=auth&action=processLogin"
-          method="POST"
-        > 
+          action="index.php?controller=auth&action=processLogin" method="POST"> 
+          <h2> Đăng Nhập</h2>
+          <?php 
+// Nếu Controller gửi sang biến $error, ta sẽ hiển thị nó ở đây
+        if (isset($error) && !empty($error)): ?>
+        <div class="error"><?php echo htmlspecialchars($error); ?></div>
+        <?php endif; ?>
+
+
             <div class="form-group">
-              <input type="text" id="username" name="username" required placeholder="Username"/>
+                <label for="username">Tên Đăng Nhập</label>
+              <input type="text" id="username" name="username" required>
             </div>
             <div class="form-group">
-              <input type="password" id="password" name="password" required placeholder="PassWord"/>
+                <label for="password"> Mật Khẩu</label>
+              <input type="password" id="password" name="password" required>
             </div>
             
-          <div class="login-group">
+          <!-- <div class="login-group">
             <div class="forgot-pass">
-              <a href="">Quên mật khẩu</a>
-            </div>
+              <a href="">Quên mật khẩu</a> -->
+            <!-- </div> -->
             <div class="btn-login"><button type="submit" >Login</button></div>
           </div>
           </div>
