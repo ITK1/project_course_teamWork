@@ -17,22 +17,16 @@ private function __construct(){
     }
 }
 
-public static function getsql(){
-
-     if(self::$getsql === null){
-        self::$getsql = new self();
-     }
-     return self::$getsql;
-}
+ public static function getsql(){
+      if(self::$getsql ==null){
+         self::$getsql = new Database();
+      }
+      return self::$getsql;
+   }
 
 public function getConnection(){
     return $this->pdo;
 }
-
-
-
-
-
 }
 
 ?>
